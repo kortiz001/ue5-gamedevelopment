@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"/Users/kevinortiz/Documents/Unreal Projects/FirstUEProject/Content/Blueprints/BP_Player.uasset",
+				"/Users/kevinortiz/Documents/Unreal Projects/FirstUEProject/Content/Levels/Testing.umap",
 				"C:/Users/Ncske/OneDrive/Documents/Unreal Projects/FirstUEProject/Content/Levels/Testing.umap",
 				"C:/Users/Ncske/OneDrive/Documents/Unreal Projects/FirstUEProject/Content/Blueprints/GM_SinglePlayer.uasset",
 				"C:/Users/Ncske/OneDrive/Documents/Unreal Projects/FirstUEProject/Content/Blueprints/BP_Player.uasset",

@@ -1,4 +1,9 @@
 ProjectPath: "/Users/kevinortiz/Documents/Unreal Projects/PythonDevelopment/"
+Blueprints:
+    Player:
+        Name: BP_Player
+        Path: "/Game/FirstPerson/Blueprints/"
+        ParentClass: Character
 InputMappingContext:
     Player:
         Name: IMC_Player

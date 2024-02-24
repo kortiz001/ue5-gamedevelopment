@@ -9,12 +9,10 @@ config_data = Common.load_config_file("/Users/kevinortiz/Documents/Unreal Projec
 guns = config_data["Guns"]
 for gun in guns:
     for gun_type in guns[gun]:
-        # Get the asset path
         asset_path = guns[gun][gun_type]["AssetPath"]
         static_mesh_name = guns[gun][gun_type]["StaticMeshName"]
 
         if not unreal.EditorAssetLibrary.does_asset_exist(static_mesh_name):
-            # Create the static mesh from the skeletal mesh
             Common.create_static_mesh_from_skeletal_mesh(asset_path, static_mesh_name)
         else:
             print(f"Static mesh {static_mesh_name} already exists")
@@ -33,7 +31,6 @@ for mapping_context in mapping_context_data:
     mapping_context_path = mapping_context_data[mapping_context]["Path"]
     mapping_context_input_action_mappings = mapping_context_data[mapping_context]["InputActions"]
 
-    # Create input mapping context
     if not unreal.EditorAssetLibrary.does_asset_exist(f"{mapping_context_path}{mapping_context_name}"):
         input_mapping_context = unreal.AssetTools.create_asset(asset_tools, asset_name = mapping_context_name, package_path = mapping_context_path, asset_class = unreal.InputMappingContext, factory = unreal.InputMappingContext_Factory())
         unreal.EditorAssetLibrary.save_asset(f"{mapping_context_path}{mapping_context_name}")
@@ -44,3 +41,14 @@ for mapping_context in mapping_context_data:
     #     # Create input action mappings
     #     input_action = unreal.AssetTools.create_asset(asset_tools, asset_name = input_action_name, package_path = mapping_context_path, asset_class = unreal.InputAction, factory = unreal.InputAction_Factory())
     #     unreal.EditorAssetLibrary.save_asset(input_action)
+
+blueprint_data = config_data["Blueprints"]
+for blueprint in blueprint_data:
+    blueprint_name = blueprint_data[blueprint]["Name"]
+    blueprint_path = blueprint_data[blueprint]["Path"]
+    blueprint_parent_class = blueprint_data[blueprint]["ParentClass"]
+
+    if not unreal.EditorAssetLibrary.does_asset_exist(f"{blueprint_path}{blueprint_name}"):
+        blueprint_class = unreal.AssetTools.create_asset(asset_tools, asset_name = blueprint_name, package_path = blueprint_path, asset_class = unreal.Blueprint, factory = unreal.BlueprintFactory())
+        unreal.BlueprintEditorLibrary.reparent_blueprint(blueprint = blueprint_class, new_parent_class = unreal.Character)
+        unreal.EditorAssetLibrary.save_asset(f"{blueprint_path}{blueprint_name}")

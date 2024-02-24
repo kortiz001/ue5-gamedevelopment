@@ -1,0 +1,57 @@
+ProjectPath: "/Users/kevinortiz/Documents/Unreal Projects/PythonDevelopment/"
+InputMappingContext:
+    Player:
+        Name: IMC_Player
+        Path: "/Game/FirstPerson/Input/"
+        InputActions:
+            - Name: Move
+            - Name: Look
+            - Name: Jump
+            - Name: Fire
+            - Name: Reload
+            - Name: OpenInventory
+            - Name: OpenMap
+            - Name: Interact
+Guns:
+    Pistols:
+        HandgunA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Pistols_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Pistols_A"
+        HandgunB:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Pistols_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Pistols_B"
+    Assault_Rifles:
+        AssaultRifleA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Assault_Rifle_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Assault_Rifle_A"
+        AssaultRifleB:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Assault_Rifle_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Assault_Rifle_B"
+    Grenade_Launcher:
+        GrenadeLauncherA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Grenade_Launcher_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Grenade_Launcher_A"
+        GrenadeLauncherB:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Grenade_Launcher_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Grenade_Launcher_B"
+    Rocket_Launcher:
+        RocketLauncherA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Rocket_Launcher_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Rocket_Launcher_A"
+        RocketLauncherA:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Rocket_Launcher_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Rocket_Launcher_B"
+    Shotgun:
+        ShotgunA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Shotgun_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Shotgun_A"
+        ShotgunA:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Shotgun_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Shotgun_B"
+    SniperRifles:
+        SniperRifleA:
+            AssetPath: "/Game/MilitaryWeapSilver/Weapons/Sniper_Rifle_A"
+            StaticMeshName: "/Game/MilitaryWeapSilver/Weapons/SM_Sniper_Rifle_A"
+        SniperRifleA:
+            AssetPath: "/Game/MilitaryWeapDark/Weapons/Sniper_Rifle_B"
+            StaticMeshName: "/Game/MilitaryWeapDark/Weapons/SM_Sniper_Rifle_B"
